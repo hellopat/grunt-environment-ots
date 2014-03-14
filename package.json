@@ -1,0 +1,16 @@
+{
+  "name": "grunt-environment-ots",
+  "version": "0.0.1",
+  "description": "OneTwoSee grunt plugin to write an environment file to specified location",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hellopat/grunt-environment-ots.git"
+  },
+  "main": "Gruntfile.js",
+  "keywords": [
+    "environment",
+    "grunt"
+  ],
+  "author": "Patrick Clark",
+  "license": "MIT"
+}
