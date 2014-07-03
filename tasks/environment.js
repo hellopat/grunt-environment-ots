@@ -4,16 +4,13 @@ module.exports = function(grunt) {
 
   'use strict';
 
-  grunt.registerTask('environment', 'Writes an environment file to specified location', function() {
+  grunt.registerMultiTask('environment', 'Writes an environment file to specified location', function() {
 
-    grunt.config.requires(
-      'environment.src',
-      'environment.dest'
-    );
+    var data = this.data;
 
-    var src = grunt.config.get('environment.src');
-    var dest = grunt.config.get('environment.dest');
-    var envFile = grunt.config.get('environment.fileName') || 'environment.json';
+    var src = data.src || grunt.config.get('environment.src');
+    var dest = data.dest || grunt.config.get('environment.dest');
+    var envFile = data.fileName || grunt.config.get('environment.fileName') || 'environment.json';
 
     if (grunt.file.isDir(src)) {
       src = path.join(src, grunt.option('target') + '.json');
